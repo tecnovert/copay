@@ -136,7 +136,7 @@
     },
     "win": {
       "target": [
-        "appx"
+        "portable"
       ],
       "icon": "resources/Particl Copay/windows/icon.ico",
       "artifactName": "${productName}.${ext}"

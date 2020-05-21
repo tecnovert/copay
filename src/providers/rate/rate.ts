@@ -78,7 +78,7 @@ export class RateProvider {
   public updateRatesPart(): Promise<any> {
     return new Promise((resolve, reject) => {
       this.getPART().then(dataPART => {
-        const rate_btc = dataPART[0].price_btc;
+        const rate_btc = dataPART.particl.btc;
         this.getBTC()
           .then(dataBTC => {
             _.each(dataBTC, currency => {
@@ -91,15 +91,15 @@ export class RateProvider {
             this.logger.error(errorPART);
             reject(errorPART);
           });
-      });
+      }).catch(e => { this.logger.error('err', e); reject(e) });
     });
   }
 
   public getPART(): Promise<any> {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       this.http.get(this.partRateServiceUrl).subscribe(data => {
         resolve(data);
-      });
+      }, e => reject(e));
     });
   }
 
