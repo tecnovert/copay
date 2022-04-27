@@ -13,7 +13,7 @@
   "nameCase": "Particl Copay",
   "nameCaseNoSpace": "ParticlCopay",
   "gitHubRepoName": "copay",
-  "gitHubRepoUrl": "git://github.com/particl/copay.git",
+  "gitHubRepoUrl": "https://github.com/particl/copay.git",
   "gitHubRepoBugs": "https://github.com/particl/copay/issues",
   "disclaimerUrl": "https://copay.io/disclaimer",
   "url": "https://github.com/particl/copay",
