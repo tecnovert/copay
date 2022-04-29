@@ -9,7 +9,7 @@ const env: EnvironmentSchema = {
   ratesAPI: {
     btc: 'https://bitpay.com/api/rates',
     bch: 'https://bitpay.com/api/rates/bch',
-    part: 'https://api.coinmarketcap.com/v1/ticker/particl/'
+    part: 'https://api.coingecko.com/api/v3/simple/price?ids=particl\&vs_currencies=btc'
   },
   activateScanner: true
 };

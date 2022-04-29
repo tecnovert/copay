@@ -78,7 +78,7 @@ export class RateProvider {
   public updateRatesPart(): Promise<any> {
     return new Promise((resolve, reject) => {
       this.getPART().then(dataPART => {
-        const rate_btc = dataPART[0].price_btc;
+        const rate_btc = dataPART['particl']['btc'];
         this.getBTC()
           .then(dataBTC => {
             _.each(dataBTC, currency => {
